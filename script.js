@@ -48,3 +48,5 @@ container.appendChild(card);
 }
 
 fetchCryptoData();
+
+setInterval(fetchCryptoData, 60000);
