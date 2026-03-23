@@ -22,6 +22,11 @@ const card = document.createElement("div");
 
 card.className = "crypto-card";
 
+const change = coin.price_change_percentage_24h;
+
+const changeClass = change >= 0 ?
+"positive" : "negative";
+
 card.innerHTML = `
 
 <img src="${coin.image}" width="50">
@@ -30,7 +35,9 @@ card.innerHTML = `
 
 <p>$${coin.current_price}</p>
 
-<p>${coin.price_change_percentage_24h.toFixed(2)}%</p>
+<p class="${changeClass}">
+${change.toFixed(2)}%
+</p>
 
 `;
 
