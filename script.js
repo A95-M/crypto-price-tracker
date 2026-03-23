@@ -24,6 +24,8 @@ card.className = "crypto-card";
 
 card.innerHTML = `
 
+<img src="${coin.image}" width="50">
+
 <h2>${coin.name}</h2>
 
 <p>$${coin.current_price}</p>
