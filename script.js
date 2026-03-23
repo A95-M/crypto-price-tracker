@@ -2,6 +2,8 @@ const container = document.getElementById("crypto-container");
 
 async function fetchCryptoData() {
 
+try {
+
 container.innerHTML = "Loading...";
 
 const response = await fetch(
@@ -11,6 +13,16 @@ const response = await fetch(
 const data = await response.json();
 
 displayCoins(data);
+
+}
+
+catch(error){
+
+container.innerHTML = "Failed to load data";
+
+console.error(error);
+
+}
 
 }
 
