@@ -8,7 +8,31 @@ const response = await fetch(
 
 const data = await response.json();
 
-console.log(data);
+displayCoins(data);
+
+}
+
+function displayCoins(coins){
+
+container.innerHTML = "";
+
+coins.forEach(coin => {
+
+const card = document.createElement("div");
+
+card.className = "crypto-card";
+
+card.innerHTML = `
+
+<h2>${coin.name}</h2>
+
+<p>$${coin.current_price}</p>
+
+`;
+
+container.appendChild(card);
+
+});
 
 }
 
