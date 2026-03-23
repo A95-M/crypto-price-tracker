@@ -1,5 +1,7 @@
 const container = document.getElementById("crypto-container");
 
+let coinsData = [];
+
 async function fetchCryptoData() {
 
 try {
@@ -11,6 +13,8 @@ const response = await fetch(
 );
 
 const data = await response.json();
+
+coinsData = data;
 
 displayCoins(data);
 
@@ -64,3 +68,17 @@ container.appendChild(card);
 fetchCryptoData();
 
 setInterval(fetchCryptoData, 60000);
+
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", function(){
+
+const value = this.value.toLowerCase();
+
+const filtered = coinsData.filter(coin =>
+coin.name.toLowerCase().includes(value)
+);
+
+displayCoins(filtered);
+
+});
