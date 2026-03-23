@@ -30,6 +30,8 @@ card.innerHTML = `
 
 <p>$${coin.current_price}</p>
 
+<p>${coin.price_change_percentage_24h.toFixed(2)}%</p>
+
 `;
 
 container.appendChild(card);
