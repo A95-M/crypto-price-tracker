@@ -112,3 +112,51 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
 }
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+#crypto-container {
+
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+}
+
+#search {
+
+max-width: 300px;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+h1 {
+
+font-size: 24px;
+
+}
+
+#crypto-container {
+
+grid-template-columns: 1fr;
+
+}
+
+.crypto-card {
+
+padding: 15px;
+
+}
+
+#search {
+
+max-width: 250px;
+
+}
+
+}
