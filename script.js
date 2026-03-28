@@ -82,3 +82,19 @@ coin.name.toLowerCase().includes(value)
 displayCoins(filtered);
 
 });
+
+const sortSelect = document.getElementById("sort");
+
+sortSelect.addEventListener("change", function() {
+    let sortedCoins = [...coinsData];
+
+    if(this.value === "price-high") {
+        sortedCoins.sort((a, b) => b.current_price - a.current_price);
+    }
+
+    if(this.value === "price-low") {
+        sortedCoins.sort((a, b) => a.current_price - b.current_price);
+    }
+
+    displayCoins(sortedCoins);
+});
