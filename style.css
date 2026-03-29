@@ -73,6 +73,10 @@ transform: translateY(-5px);
     font-size: 12px;
 }
 
+.top-gainer-card {
+  border: 2px solid gold;
+}
+
 .positive {
     color: green;
 

@@ -41,8 +41,9 @@ const topGainer = coins.reduce((max, coin) => {
 coins.forEach(coin => {
 
 const card = document.createElement("div");
-
-card.className = "crypto-card";
+card.className = coin.id === topGainer.id
+? "crypto-card top-gainer-card"
+: "crypto-card";
 
 const change = coin.price_change_percentage_24h;
 
