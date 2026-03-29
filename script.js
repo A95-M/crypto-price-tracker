@@ -34,6 +34,10 @@ function displayCoins(coins){
 
 container.innerHTML = "";
 
+const topGainer = coins.reduce((max, coin) => {
+        return coin.price_change_percentage_24h > max.price_change_percentage_24h ? coin : max;
+    }, coins[0]);
+
 coins.forEach(coin => {
 
 const card = document.createElement("div");
@@ -45,7 +49,11 @@ const change = coin.price_change_percentage_24h;
 const changeClass = change >= 0 ?
 "positive" : "negative";
 
+const badge = coin.id === topGainer.id ? `<span class="top-gainer">🔥 Top Gainer</span>` : "";
+
 card.innerHTML = `
+
+${badge}
 
 <img src="${coin.image}" width="50">
 
