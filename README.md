@@ -2,6 +2,15 @@
 
 ![Screenshot](images/screenshot.png)
 
+## Live Demo 🌐
+
+[Try it online!](https://a95-m.github.io/crypto-price-tracker/)
+
+## Author ✍️
+
+Ash  
+[GitHub](https://github.com/A95-M)
+
 A clean and responsive cryptocurrency price tracker that fetches real-time data from CoinGecko API. Includes search, sorting, auto-refresh, Top Gainer badge, and responsive layout — perfect for a Junior Frontend portfolio.
 
 ---
